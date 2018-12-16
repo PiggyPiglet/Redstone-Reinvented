@@ -1,0 +1,5 @@
+name: LogicGateBlocks
+version: @version@
+main: me.piggypiglet.logicgateblocks.LogicGateBlocks
+author: PiggyPiglet
+website: https://piggypiglet.me
