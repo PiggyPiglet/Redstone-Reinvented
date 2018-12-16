@@ -5,6 +5,8 @@ import com.google.inject.Guice;
 import com.google.inject.Injector;
 import me.piggypiglet.logicgateblocks.LogicGateBlocks;
 import me.piggypiglet.logicgateblocks.core.objects.tasks.Task;
+import me.piggypiglet.logicgateblocks.core.storage.GFile;
+import me.piggypiglet.logicgateblocks.core.storage.Lang;
 
 // ------------------------------
 // Copyright (c) PiggyPiglet 2018
@@ -24,6 +26,6 @@ public final class BinderModule extends AbstractModule {
     @Override
     public void configure() {
         bind(LogicGateBlocks.class).toInstance(main);
-        requestStaticInjection(Task.class);
+        requestStaticInjection(Task.class, Lang.class);
     }
 }

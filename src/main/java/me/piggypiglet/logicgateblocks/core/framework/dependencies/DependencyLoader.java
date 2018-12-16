@@ -57,8 +57,6 @@ public final class DependencyLoader {
                 URL url = d.getUrl();
 
                 try (InputStream is = url.openStream()) {
-                    System.out.println(lib.toPath());
-
                     Files.copy(is, lib.toPath());
                 }
             } catch (Exception e) {

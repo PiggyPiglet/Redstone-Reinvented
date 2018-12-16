@@ -1,5 +1,6 @@
 package me.piggypiglet.logicgateblocks;
 
+import com.google.inject.Inject;
 import com.google.inject.Injector;
 import lombok.Getter;
 import me.piggypiglet.logicgateblocks.core.framework.BinderModule;
@@ -7,6 +8,7 @@ import me.piggypiglet.logicgateblocks.core.framework.dependencies.DependencyLoad
 import me.piggypiglet.logicgateblocks.core.framework.dependencies.MavenLibraries;
 import me.piggypiglet.logicgateblocks.core.framework.dependencies.MavenLibrary;
 import me.piggypiglet.logicgateblocks.core.objects.enums.Registerables;
+import me.piggypiglet.logicgateblocks.core.storage.GFile;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import java.util.stream.Stream;
@@ -29,12 +31,14 @@ import static me.piggypiglet.logicgateblocks.core.objects.enums.Registerables.*;
         }
 )
 public final class LogicGateBlocks extends JavaPlugin {
+    @Inject private GFile gFile;
+
     @Getter private Injector injector;
 
     @Override
     public void onEnable() {
         Stream.of(
-                DEPENDENCIES, GUICE, FILES, HANDLERS, COMMANDS, EVENTS
+                DEPENDENCIES, GUICE, FILES, COMMANDS, EVENTS
         ).forEach(this::register);
     }
 
@@ -50,12 +54,13 @@ public final class LogicGateBlocks extends JavaPlugin {
                 break;
 
             case FILES:
-                break;
-
-            case HANDLERS:
+                Stream.of(
+                        "config.yml", "lang.yml"
+                ).forEach(i -> gFile.make(i.substring(0, i.lastIndexOf('.')), getDataFolder() + "/" + i, "/" + i));
                 break;
 
             case COMMANDS:
+
                 break;
 
             case EVENTS:

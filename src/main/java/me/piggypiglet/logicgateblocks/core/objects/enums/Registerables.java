@@ -8,7 +8,6 @@ public enum Registerables {
     DEPENDENCIES,
     GUICE,
     FILES,
-    HANDLERS,
     COMMANDS,
     EVENTS
 }

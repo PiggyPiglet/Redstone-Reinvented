@@ -27,7 +27,6 @@ public final class GFile {
 
     @SuppressWarnings("ResultOfMethodCallIgnored")
     public void make(String name, String externalPath, String internalPath) {
-        name = name.substring(0, name.lastIndexOf('.'));
         File file = new File(externalPath);
 
         try {
