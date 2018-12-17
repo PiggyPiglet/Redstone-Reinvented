@@ -89,6 +89,10 @@ public final class GFile {
         return new YamlConfiguration();
     }
 
+    public void clear() {
+        itemMaps.clear();
+    }
+
     private static boolean exportResource(InputStream source, String destination) {
         boolean success = true;
 

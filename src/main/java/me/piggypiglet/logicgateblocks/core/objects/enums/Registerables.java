@@ -7,6 +7,7 @@ package me.piggypiglet.logicgateblocks.core.objects.enums;
 public enum Registerables {
     DEPENDENCIES,
     GUICE,
+    REFLECTIONS,
     FILES,
     COMMANDS,
     EVENTS

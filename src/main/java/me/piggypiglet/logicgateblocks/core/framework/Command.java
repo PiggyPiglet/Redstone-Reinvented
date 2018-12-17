@@ -19,6 +19,7 @@ public abstract class Command {
     @Getter private final List<String> permissions = new ArrayList<>();
     @Getter private String description = "null";
     @Getter private String usage = "<args> [optional args]";
+    protected Options options = new Options();
     private CommandSender sender;
 
     protected Command(String... commands) {
@@ -28,6 +29,7 @@ public abstract class Command {
     protected abstract void execute(CommandSender sender, String[] args);
 
     public void run(CommandSender sender, String[] args) {
+        this.sender = sender;
         execute(sender, args);
     }
 

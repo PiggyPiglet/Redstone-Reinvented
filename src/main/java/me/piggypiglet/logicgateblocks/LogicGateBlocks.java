@@ -4,12 +4,15 @@ import com.google.inject.Inject;
 import com.google.inject.Injector;
 import lombok.Getter;
 import me.piggypiglet.logicgateblocks.core.framework.BinderModule;
+import me.piggypiglet.logicgateblocks.core.framework.Command;
 import me.piggypiglet.logicgateblocks.core.framework.dependencies.DependencyLoader;
 import me.piggypiglet.logicgateblocks.core.framework.dependencies.MavenLibraries;
 import me.piggypiglet.logicgateblocks.core.framework.dependencies.MavenLibrary;
+import me.piggypiglet.logicgateblocks.core.handlers.CommandHandler;
 import me.piggypiglet.logicgateblocks.core.objects.enums.Registerables;
 import me.piggypiglet.logicgateblocks.core.storage.GFile;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.reflections.Reflections;
 
 import java.util.stream.Stream;
 
@@ -33,16 +36,19 @@ import static me.piggypiglet.logicgateblocks.core.objects.enums.Registerables.*;
 public final class LogicGateBlocks extends JavaPlugin {
     @Inject private GFile gFile;
 
+    @Inject private CommandHandler commandHandler;
+
     @Getter private Injector injector;
+    @Getter private Reflections reflections;
 
     @Override
     public void onEnable() {
         Stream.of(
-                DEPENDENCIES, GUICE, FILES, COMMANDS, EVENTS
+                DEPENDENCIES, GUICE, REFLECTIONS, FILES, COMMANDS, EVENTS
         ).forEach(this::register);
     }
 
-    private void register(Registerables registerable) {
+    public void register(Registerables registerable) {
         switch (registerable) {
             case DEPENDENCIES:
                 DependencyLoader.loadAll(getClass());
@@ -53,14 +59,21 @@ public final class LogicGateBlocks extends JavaPlugin {
                 injector.injectMembers(this);
                 break;
 
+            case REFLECTIONS:
+                reflections = new Reflections("me.piggypiglet.logicgateblocks");
+                break;
+
             case FILES:
+                gFile.clear();
+
                 Stream.of(
                         "config.yml", "lang.yml"
                 ).forEach(i -> gFile.make(i.substring(0, i.lastIndexOf('.')), getDataFolder() + "/" + i, "/" + i));
                 break;
 
             case COMMANDS:
-
+                getCommand("lgb").setExecutor(commandHandler);
+                reflections.getSubTypesOf(Command.class).stream().map(injector::getInstance).forEach(commandHandler.getCommands()::add);
                 break;
 
             case EVENTS:

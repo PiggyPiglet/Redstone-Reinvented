@@ -10,7 +10,7 @@ import org.bukkit.command.CommandSender;
 // ------------------------------
 public final class MessageUtils {
     public static void sendMessage(CommandSender user, String key, Object... variables) {
-        user.sendMessage(cc(Lang.getPrefix(false) + Lang.getString(key, variables)));
+        user.sendMessage(cc(Lang.getPrefix(false) + " " + Lang.getString(key, variables)));
     }
 
     private static String cc(String text) {
