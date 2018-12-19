@@ -1,6 +1,6 @@
-package me.piggypiglet.logicgateblocks.core.utils.chat;
+package me.piggypiglet.redstonereinvented.core.utils.chat;
 
-import me.piggypiglet.logicgateblocks.core.storage.Lang;
+import me.piggypiglet.redstonereinvented.core.storage.Lang;
 import org.bukkit.ChatColor;
 import org.bukkit.command.CommandSender;
 

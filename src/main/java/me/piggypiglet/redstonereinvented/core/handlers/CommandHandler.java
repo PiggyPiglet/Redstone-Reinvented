@@ -1,12 +1,10 @@
-package me.piggypiglet.logicgateblocks.core.handlers;
+package me.piggypiglet.redstonereinvented.core.handlers;
 
-import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import lombok.Getter;
-import me.piggypiglet.logicgateblocks.LogicGateBlocks;
-import me.piggypiglet.logicgateblocks.core.framework.Command;
-import me.piggypiglet.logicgateblocks.core.utils.chat.MessageUtils;
-import me.piggypiglet.logicgateblocks.core.utils.string.StringUtils;
+import me.piggypiglet.redstonereinvented.core.framework.Command;
+import me.piggypiglet.redstonereinvented.core.utils.chat.MessageUtils;
+import me.piggypiglet.redstonereinvented.core.utils.string.StringUtils;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 

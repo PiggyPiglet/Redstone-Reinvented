@@ -1,6 +1,4 @@
-package me.piggypiglet.logicgateblocks.core.objects.tasks;
-
-import org.bukkit.scheduler.BukkitRunnable;
+package me.piggypiglet.redstonereinvented.core.objects.tasks;
 
 // ------------------------------
 // Copyright (c) PiggyPiglet 2018

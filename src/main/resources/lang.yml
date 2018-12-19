@@ -1,7 +1,7 @@
 console:
-  prefix: "[LGB]"
+  prefix: "[RR]"
 commands:
-  prefix: "&8[&cLGB&8]"
+  prefix: "&8[&cRR&8]"
   no-permission: "&cYou do not have permission for that command."
   unknown-command: "&7Unknown command, type &c/lgb help &7for help."
   incorrect-usage: "&7Incorrect usage, the correct usage of that command is as follows: &c%s"

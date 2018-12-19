@@ -1,4 +1,4 @@
-package me.piggypiglet.logicgateblocks.core.objects.enums;
+package me.piggypiglet.redstonereinvented.core.objects.enums;
 
 // ------------------------------
 // Copyright (c) PiggyPiglet 2018

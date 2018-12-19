@@ -1,4 +1,4 @@
-package me.piggypiglet.logicgateblocks.core.utils.string;
+package me.piggypiglet.redstonereinvented.core.utils.string;
 
 import java.util.List;
 import java.util.stream.Stream;

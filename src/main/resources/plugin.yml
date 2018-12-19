@@ -1,9 +1,9 @@
-name: LogicGateBlocks
+name: RedstoneReinvented
 version: @version@
-main: me.piggypiglet.logicgateblocks.LogicGateBlocks
+main: me.piggypiglet.redstonereinvented.RedstoneReinvented
 author: PiggyPiglet
 website: https://piggypiglet.me
 commands:
-  lgb:
-    description: "LogicGateBlocks main command."
-    aliases: logicgateblocks
+  rr:
+    description: "RedstoneReinvented main command."
+    aliases: redstonereinvented

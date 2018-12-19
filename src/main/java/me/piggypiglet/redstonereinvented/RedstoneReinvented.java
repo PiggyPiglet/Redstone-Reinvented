@@ -1,22 +1,22 @@
-package me.piggypiglet.logicgateblocks;
+package me.piggypiglet.redstonereinvented;
 
 import com.google.inject.Inject;
 import com.google.inject.Injector;
 import lombok.Getter;
-import me.piggypiglet.logicgateblocks.core.framework.BinderModule;
-import me.piggypiglet.logicgateblocks.core.framework.Command;
-import me.piggypiglet.logicgateblocks.core.framework.dependencies.DependencyLoader;
-import me.piggypiglet.logicgateblocks.core.framework.dependencies.MavenLibraries;
-import me.piggypiglet.logicgateblocks.core.framework.dependencies.MavenLibrary;
-import me.piggypiglet.logicgateblocks.core.handlers.CommandHandler;
-import me.piggypiglet.logicgateblocks.core.objects.enums.Registerables;
-import me.piggypiglet.logicgateblocks.core.storage.GFile;
+import me.piggypiglet.redstonereinvented.core.framework.BinderModule;
+import me.piggypiglet.redstonereinvented.core.framework.Command;
+import me.piggypiglet.redstonereinvented.core.framework.dependencies.DependencyLoader;
+import me.piggypiglet.redstonereinvented.core.framework.dependencies.MavenLibraries;
+import me.piggypiglet.redstonereinvented.core.framework.dependencies.MavenLibrary;
+import me.piggypiglet.redstonereinvented.core.handlers.CommandHandler;
+import me.piggypiglet.redstonereinvented.core.objects.enums.Registerables;
+import me.piggypiglet.redstonereinvented.core.storage.GFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.reflections.Reflections;
 
 import java.util.stream.Stream;
 
-import static me.piggypiglet.logicgateblocks.core.objects.enums.Registerables.*;
+import static me.piggypiglet.redstonereinvented.core.objects.enums.Registerables.*;
 
 // ------------------------------
 // Copyright (c) PiggyPiglet 2018
@@ -33,7 +33,7 @@ import static me.piggypiglet.logicgateblocks.core.objects.enums.Registerables.*;
                 @MavenLibrary(groupId = "commons-io", artifactId = "commons-io", version = "2.6")
         }
 )
-public final class LogicGateBlocks extends JavaPlugin {
+public final class RedstoneReinvented extends JavaPlugin {
     @Inject private GFile gFile;
 
     @Inject private CommandHandler commandHandler;

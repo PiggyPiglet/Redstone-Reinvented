@@ -1,7 +1,7 @@
-package me.piggypiglet.logicgateblocks.core.storage;
+package me.piggypiglet.redstonereinvented.core.storage;
 
 import com.google.inject.Singleton;
-import me.piggypiglet.logicgateblocks.LogicGateBlocks;
+import me.piggypiglet.redstonereinvented.RedstoneReinvented;
 import org.apache.commons.io.FileUtils;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -34,7 +34,7 @@ public final class GFile {
                 file.getParentFile().mkdirs();
 
                 if (file.createNewFile()) {
-                    if (exportResource(LogicGateBlocks.class.getResourceAsStream(internalPath), externalPath)) {
+                    if (exportResource(RedstoneReinvented.class.getResourceAsStream(internalPath), externalPath)) {
                         insertIntoMap(name, file);
 
                         logger.info(name + " successfully created & loaded.");

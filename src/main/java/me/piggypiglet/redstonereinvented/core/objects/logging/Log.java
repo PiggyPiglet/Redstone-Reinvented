@@ -1,6 +1,6 @@
-package me.piggypiglet.logicgateblocks.core.objects.logging;
+package me.piggypiglet.redstonereinvented.core.objects.logging;
 
-import me.piggypiglet.logicgateblocks.core.storage.Lang;
+import me.piggypiglet.redstonereinvented.core.storage.Lang;
 import org.bukkit.Bukkit;
 
 import java.util.logging.Logger;

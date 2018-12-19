@@ -1,9 +1,8 @@
-package me.piggypiglet.logicgateblocks.core.objects.tasks;
+package me.piggypiglet.redstonereinvented.core.objects.tasks;
 
 import com.google.inject.Inject;
-import me.piggypiglet.logicgateblocks.LogicGateBlocks;
+import me.piggypiglet.redstonereinvented.RedstoneReinvented;
 import org.bukkit.Bukkit;
-import org.bukkit.scheduler.BukkitRunnable;
 
 import java.util.function.Consumer;
 
@@ -12,7 +11,7 @@ import java.util.function.Consumer;
 // https://www.piggypiglet.me
 // ------------------------------
 public final class Task {
-    @Inject private static LogicGateBlocks main;
+    @Inject private static RedstoneReinvented main;
 
     public static void async(Consumer<Runnable> task) {
         Bukkit.getScheduler().runTaskAsynchronously(main, new Runnable() {

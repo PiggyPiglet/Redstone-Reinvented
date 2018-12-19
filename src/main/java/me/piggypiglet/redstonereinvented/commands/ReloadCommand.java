@@ -1,9 +1,9 @@
-package me.piggypiglet.logicgateblocks.commands;
+package me.piggypiglet.redstonereinvented.commands;
 
 import com.google.inject.Inject;
-import me.piggypiglet.logicgateblocks.LogicGateBlocks;
-import me.piggypiglet.logicgateblocks.core.framework.Command;
-import me.piggypiglet.logicgateblocks.core.objects.enums.Registerables;
+import me.piggypiglet.redstonereinvented.RedstoneReinvented;
+import me.piggypiglet.redstonereinvented.core.framework.Command;
+import me.piggypiglet.redstonereinvented.core.objects.enums.Registerables;
 import org.bukkit.command.CommandSender;
 
 // ------------------------------
@@ -11,7 +11,7 @@ import org.bukkit.command.CommandSender;
 // https://www.piggypiglet.me
 // ------------------------------
 public final class ReloadCommand extends Command {
-    @Inject private LogicGateBlocks main;
+    @Inject private RedstoneReinvented main;
 
     public ReloadCommand() {
         super("reload");

@@ -1,9 +1,7 @@
-package me.piggypiglet.logicgateblocks.core.framework;
+package me.piggypiglet.redstonereinvented.core.framework;
 
 import lombok.Getter;
-import lombok.Setter;
-import me.piggypiglet.logicgateblocks.core.storage.Lang;
-import me.piggypiglet.logicgateblocks.core.utils.chat.MessageUtils;
+import me.piggypiglet.redstonereinvented.core.utils.chat.MessageUtils;
 import org.bukkit.command.CommandSender;
 
 import java.util.ArrayList;

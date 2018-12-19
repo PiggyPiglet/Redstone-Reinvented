@@ -1,4 +1,4 @@
-package me.piggypiglet.logicgateblocks.core.storage;
+package me.piggypiglet.redstonereinvented.core.storage;
 
 import com.google.inject.Inject;
 

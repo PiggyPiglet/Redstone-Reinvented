@@ -1,7 +1,7 @@
-package me.piggypiglet.logicgateblocks.core.framework.dependencies;
+package me.piggypiglet.redstonereinvented.core.framework.dependencies;
 
 import lombok.Data;
-import me.piggypiglet.logicgateblocks.LogicGateBlocks;
+import me.piggypiglet.redstonereinvented.RedstoneReinvented;
 import org.bukkit.Bukkit;
 
 import java.io.File;
@@ -44,7 +44,7 @@ public final class DependencyLoader {
     private static void load(Dependency d) {
         Logger logger = Bukkit.getLogger();
         String name = d.getArtifactId() + "-" + d.getVersion();
-        LogicGateBlocks main = (LogicGateBlocks) LogicGateBlocks.getProvidingPlugin(LogicGateBlocks.class);
+        RedstoneReinvented main = (RedstoneReinvented) RedstoneReinvented.getProvidingPlugin(RedstoneReinvented.class);
         File lib = new File(main.getDataFolder() + "/libs/", name + ".jar");
 
         logger.info(String.format("Loading dependency %s:%s:%s from %s", d.getGroupId(), d.getArtifactId(), d.getVersion(), d.getRepoUrl()));
